@@ -32,6 +32,7 @@ export const BodyTable = styled.tbody`
 export const TableColumn = styled.td`
     border-bottom: 1px solid #c7c1c1;
     padding: 10px;
+    font-size: 18px;
 
 :not(:last-child){
     border-right: 1px solid #c7c1c1;
