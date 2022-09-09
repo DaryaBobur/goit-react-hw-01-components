@@ -33,5 +33,5 @@ margin-right: 10px;
 width: 15px;
 height: 15px;
 border-radius: 50px;
-background-color: ${p => (p.isOnline ? 'green' : 'red')};
+background-color: ${p => p.isOnline ? "green" : "red"};
 `
