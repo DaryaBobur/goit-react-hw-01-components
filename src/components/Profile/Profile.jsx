@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import {ContainerProfile, UserName, Description, Stats, StatsItem, } from "./Profile.styled"
+
 export function Profile ({username, tag, location, avatar, stats}) {
     return (
   <ContainerProfile className="profile">
+
     <div className="description">
       <img
         src={avatar}
@@ -10,6 +12,7 @@ export function Profile ({username, tag, location, avatar, stats}) {
         className="avatar"
         width={240}
       />
+
       <UserName className="name">{username}</UserName>
       <Description className="tag">@{tag}</Description>
       <Description className="location">{location}</Description>
@@ -31,11 +34,9 @@ export function Profile ({username, tag, location, avatar, stats}) {
     </Stats>
    
   </ContainerProfile>
- 
     )
   };
   
-
   Profile.propTypes = {
     username: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
