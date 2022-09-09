@@ -5,7 +5,7 @@ margin-bottom: 50px;
 padding-top: 30px;
 
 .title {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-size: 26px;
     text-transform: uppercase;
     text-align: center;
