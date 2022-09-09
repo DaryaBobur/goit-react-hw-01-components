@@ -6,7 +6,7 @@ export function FriendList({friends}) {
 <FriendsList className="friend-list">
 {friends.map(friend => (
     <FriendItem className="item" key={friend.id}>
-    <OnlineFriend className="status">{friend.isOnline}</OnlineFriend>
+    <OnlineFriend className="status" isOnline={friend.isOnline}></OnlineFriend>
     <img className="avatar" src={friend.avatar} alt="User avatar" width="48" />
     <p className="name">{friend.name}</p>
   </FriendItem>
