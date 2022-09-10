@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
-import {SectionStatistics, StatList, StatItem} from './Statistics.styled';
+import {SectionStatistics, StatList, StatItem} from './StatisticsStyled';
 
 
-export function Statistics({title="", stats}) {
+const Statistics = ({title, stats}) => {
 return (    
-<SectionStatistics className="statistics">
+<SectionStatistics>
   {title && <h2 className="title">{title}</h2>}
 
-  <StatList className="stat-list">
+  <StatList>
     {stats.map(item => (
-       <StatItem className="item" key={item.id}>
+       <StatItem key={item.id}>
        <span className="label">{item.label}</span>
       <span className="percentage">{item.percentage}%</span>
      </StatItem>
@@ -27,3 +27,5 @@ stats: PropTypes.arrayOf(PropTypes.shape({
     percentage: PropTypes.number.isRequired,
 }))
 }
+
+export default Statistics;

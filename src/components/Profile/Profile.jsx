@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import {ContainerProfile, UserName, Description, Stats, StatsItem, } from "./Profile.styled"
+import {ContainerProfile, UserName, Description, Stats, StatsItem, } from "./ProfileStyled"
 
-export function Profile ({username, tag, location, avatar, stats}) {
+const Profile = ({username, tag, location, avatar, stats}) => {
     return (
-  <ContainerProfile className="profile">
+  <ContainerProfile>
 
     <div className="description">
       <img
@@ -13,12 +13,12 @@ export function Profile ({username, tag, location, avatar, stats}) {
         width={240}
       />
 
-      <UserName className="name">{username}</UserName>
-      <Description className="tag">@{tag}</Description>
-      <Description className="location">{location}</Description>
+      <UserName>{username}</UserName>
+      <Description>@{tag}</Description>
+      <Description>{location}</Description>
     </div>
     
-    <Stats className="stats">
+    <Stats>
       <StatsItem>
         <span className="label">Followers</span>
         <span className="quantity">{stats.followers}</span>
@@ -48,3 +48,5 @@ export function Profile ({username, tag, location, avatar, stats}) {
         likes: PropTypes.number.isRequired,
     })
   }
+
+  export default Profile;

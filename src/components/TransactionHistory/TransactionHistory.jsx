@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import { ColumnTitle, BodyTable, TableColumn, Table, TableItem } from './TransactionHistory.styled';
+import { ColumnTitle, BodyTable, TableColumn, Table, TableItem } from './TransactionHistoryStyled';
 
-export function TransactionHistory({items}) {
+const TransactionHistory = ({items}) => {
 return (
-<Table className="transaction-history">
+<Table>
  <ColumnTitle>
     <tr>
       <th>Type</th>
@@ -31,3 +31,5 @@ items:  PropTypes.arrayOf(PropTypes.shape({
 }))
 
 };
+
+export default TransactionHistory;

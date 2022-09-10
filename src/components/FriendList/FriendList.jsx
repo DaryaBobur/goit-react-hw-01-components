@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import { FriendsList, FriendItem, OnlineFriend } from './FriendList.styled';
+import { FriendsList, FriendItem, OnlineFriend } from './FriendListStyled';
 
-export function FriendList({friends}) {
+const FriendList = ({friends}) => {
  return (    
-<FriendsList className="friend-list">
+<FriendsList>
 {friends.map(friend => (
-    <FriendItem className="item" key={friend.id}>
-    <OnlineFriend className="status" isOnline={friend.isOnline}></OnlineFriend>
+    <FriendItem key={friend.id}>
+    <OnlineFriend isOnline={friend.isOnline}></OnlineFriend>
     <img className="avatar" src={friend.avatar} alt="User avatar" width="48" />
     <p className="name">{friend.name}</p>
   </FriendItem>
@@ -23,3 +23,5 @@ FriendList.propTypes = {
     name: PropTypes.string.isRequired,
 }))
 }
+
+export default FriendList;
