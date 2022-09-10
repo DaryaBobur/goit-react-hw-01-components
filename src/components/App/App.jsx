@@ -6,7 +6,7 @@ import user from "../Profile/user.json";
 import data from "../Statistics/data.json";
 import friends from "../FriendList/friends.json";
 import transactions from "../TransactionHistory/transactions.json";
-import { AppWrap } from "./App.styled";
+import { AppWrap } from "./AppStyled";
 
 const App = () => {
   return (
